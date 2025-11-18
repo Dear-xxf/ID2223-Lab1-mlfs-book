@@ -11,11 +11,14 @@ Our dashboard visualizes:
 - Historical measured PM2.5 for the selected sensor
 - A **hindcast** plot showing predictions vs. outcomes for recent days
 
- **Public dashboard URL:**  TODO
+ **Public dashboard URL:**  
 
+<figure> <img src="docs/air-quality/assets/img/pm25_hindcast_1day.png" alt="pm25_hindcast_1day" title="PM2.5 Hindcast 1 Day"> <figcaption>PM2.5 Hindcast 1 Day</figcaption> </figure>
 
+<figure> <img src="docs/air-quality/assets/img/pm25_hindcast_1day_v2.png" alt="pm25_hindcast_1day_v2" title="PM2.5 Hindcast 1 Day v2"> <figcaption>PM2.5 Hindcast 1 Day v2</figcaption> </figure>
 
 ## Sensor Location
+
 We monitor air quality using the following sensor:
 - AQICN_COUNTRY=sweden
 - AQICN_CITY=visby
@@ -39,7 +42,7 @@ We monitor air quality using the following sensor:
   - downloads weather forecast for the next 7–10 days,
   - updates the Feature Groups in Hopsworks, including lag features in
     `air_quality` v2.  
-  The notebook is scheduled using **GitHub Actions**  
+    The notebook is scheduled using **GitHub Actions**  
 
 - **Task 3 – Training pipeline**  
   `notebooks/airquality/3_air_quality_training_pipeline.ipynb`  
@@ -73,8 +76,8 @@ We train two versions of the model in the training pipeline notebook.
 - **Training data:** Feature View v1  
 - **Model:** `XGBRegressor` with default hyperparameters  
 - **Metrics (on test set):**
-  - MSE: `TODO: mse`  
-  - R²: `TODO: r2`  
+  - MSE: `206.16512`  
+  - R²: `-0.037703415142309016`  
 
 **Observation.**  
 This model only uses weather features to explain daily PM2.5 levels. It captures
@@ -88,5 +91,5 @@ the temporal dependence of PM2.5 itself.
 - **Training data:** Feature View v2
 - **Model:** `XGBRegressor` with the same configuration for a fair comparison  
 - **Metrics (on test set):**
-  - MSE: `TODO: mse_v2`  
-  - R²: `TODO: r2_v2`  
+  - MSE: `131.80518`  
+  - R²: `0.336577032807007`  
