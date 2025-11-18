@@ -17,10 +17,10 @@ Our dashboard visualizes:
 
 ## Sensor Location
 We monitor air quality using the following sensor:
-AQICN_COUNTRY=sweden
-AQICN_CITY=visby
-AQICN_STREET=ostervag-17
-AQICN_URL=https://api.waqi.info/feed/@13987
+- AQICN_COUNTRY=sweden
+- AQICN_CITY=visby
+- AQICN_STREET=ostervag-17
+- AQICN_URL=https://api.waqi.info/feed/@13987
 
 
 
