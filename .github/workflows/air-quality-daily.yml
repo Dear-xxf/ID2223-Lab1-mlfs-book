@@ -45,10 +45,10 @@ jobs:
 
       - name: github pages publish
         uses: stefanzweifel/git-auto-commit-action@v5
-        continue-on-error: true      # ⭐ 就算没东西可 commit 也不会让整个 workflow fail
+        continue-on-error: true 
         with:
           commit_message: "Air Quality Dashboard published"
-          commit_options: '--no-verify --signoff --allow-empty'  # ⭐ 允许空 commit，避免报错
+          commit_options: '--no-verify --signoff --allow-empty' 
           file_pattern: docs/air-quality/assets/img/* docs/_includes/*
           status_options: '--untracked-files=no'
 
